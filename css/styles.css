@@ -1,5 +1,6 @@
 body {
-  text-align: center;
+  margin-top: 5em;
+
   max-width: 55em;
   margin-left: auto;
   margin-right: auto;
@@ -7,6 +8,7 @@ body {
 
 #header {
   border: 1px solid black;
+  text-align: center;
 }
 
 #happy-face {
@@ -36,7 +38,21 @@ h2 {
 }
 
 p {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Chewy', cursive;
+  letter-spacing: 0.08em;
+  line-height: 2em;
   text-align: justify;
   font-size: 1.5em;
+}
+
+.blank-words {
+  border: 2px solid black;
+  padding: 3em;
+}
+
+.paragraph {
+  border: 2px solid black;
+  padding: 3em;
+  margin-bottom: 5em;
+
 }
