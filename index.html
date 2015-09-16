@@ -33,23 +33,23 @@
     <div ng-app="" ng-init="name='female name'; job='job title'; task='tedious task'; task2='dirty task' ; mentor='celebrity'; skill='useless skill'; adj='adjective'; celebrity='obnoxious celebrity'; number='huge number'">
       <section class="blank-words">
         <h2>Provide the following words:<h2>
-            <p><input type="text" ng-model="name"></p>
-            <p><input type="text" ng-model="job"></p>
-            <p><input type="text" ng-model="task"></p>
-            <p><input type="text" ng-model="task2"></p>
-            <p><input type="text" ng-model="mentor"></p>
-            <p><input type="text" ng-model="skill"></p>
-            <p><input type="text" ng-model="adj"></p>
-            <p><input type="text" ng-model="celebrity"></p>
-            <p><input type="text" ng-model="number"></p>
+            <li><input type="text" ng-model="name"></li>
+            <li><input type="text" ng-model="job"></li>
+            <li><input type="text" ng-model="task"></li>
+            <li><input type="text" ng-model="task2"></li>
+            <li><input type="text" ng-model="mentor"></li>
+            <li><input type="text" ng-model="skill"></li>
+            <li><input type="text" ng-model="adj"></li>
+            <li><input type="text" ng-model="celebrity"></li>
+            <li><input type="text" ng-model="number"></li>
       </section>
 
     <!-- Paragraph -->
 
       <section class="paragraph">  
-        <p>{{ name }} was a {{ job }} who loved technology. Although she loved parts of her job, she absolutely hated  {{ task }} and {{ task2 }}. So, {{ name }} met with her life mentor {{ mentor }} who told her to learn how to {{ skill }} with Thinkful. Thinkful didn't offer a course on {{ skill }} so she studied programming instead. 
+        <p><em>{{ name }}</em> was a <em>{{ job }}</em> who loved technology. Although she loved parts of her job, she absolutely hated  <em>{{ task }}</em> and <em>{{ task2 }}</em>. So, <em>{{ name }}</em> met with her life mentor <em>{{ mentor }}</em> who told her to learn how to <em>{{ skill }}</em> with Thinkful. Thinkful didn't offer a course on <em>{{ skill }}</em> so she studied programming instead. 
    
-        What a great decision! With her new skills, {{ name }} built a(n) {{ adj }} robot named {{ celebrity }} that not only loved {{ task2 }} but did it {{ number }} faster. 
+        What a great decision! With her new skills, <em>{{ name }}</em> built a(n) <em>{{ adj }}</em> robot named <em>{{ celebrity }}</em> that not only loved <em>{{ task2 }}</em> but did it <em>{{ number }}</em> times faster. 
         </p>
       </section>
     </div>
