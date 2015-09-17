@@ -31,28 +31,28 @@
 
     <!-- Blank words thats need to be filled in -->
     
-    <div ng-controller="myCtrl">
+    <div ng-controller="myCtrl" >
       <section class="blank-words">
         <h2>Provide the following words:<h2>
           <ul>
             <li><input type="text" ng-model="word.name"></li>
             <li><input type="text" ng-model="word.job"></li>
             <li><input type="text" ng-model="word.task"></li>
-            <li><input type="text" ng-model="task2"></li>
-            <li><input type="text" ng-model="mentor"></li>
-            <li><input type="text" ng-model="skill"></li>
-            <li><input type="text" ng-model="adj"></li>
-            <li><input type="text" ng-model="celebrity"></li>
-            <li><input type="text" ng-model="number"></li>
+            <li><input type="text" ng-model="word.task2"></li>
+            <li><input type="text" ng-model="word.mentor"></li>
+            <li><input type="text" ng-model="word.skill"></li>
+            <li><input type="text" ng-model="word.adj"></li>
+            <li><input type="text" ng-model="word.celebrity"></li>
+            <li><input type="text" ng-model="word.number"></li>
           </ul>
       </section>
 
     <!-- Paragraph -->
 
       <section class="paragraph">  
-        <p><em>{{ name }}</em> was a <em>{{ job }}</em> who loved technology. Although she loved parts of her job, she absolutely hated  <em>{{ task }}</em> and <em>{{ task2 }}</em>. So, <em>{{ name }}</em> met with her life mentor <em>{{ mentor }}</em> who told her to learn how to <em>{{ skill }}</em> with Thinkful. Thinkful didn't offer a course on <em>{{ skill }}</em> so she studied programming instead. 
+        <p><em>{{ word.name }}</em> was a <em>{{ word.job }}</em> who loved technology. Although she loved parts of her job, she absolutely hated  <em>{{ word.task }}</em> and <em>{{ word.task2 }}</em>. So, <em>{{ word.name }}</em> met with her life mentor <em>{{ word.mentor }}</em> who told her to learn how to <em>{{ word.skill }}</em> with Thinkful. Thinkful didn't offer a course on <em>{{ word.skill }}</em> so she studied programming instead. 
    
-        What a great decision! With her new skills, <em>{{ name }}</em> built a(n) <em>{{ adj }}</em> robot named <em>{{ celebrity }}</em> that not only loved <em>{{ task2 }}</em> but did it <em>{{ number }}</em> times faster. 
+        What a great decision! With her new skills, <em>{{ word.name }}</em> built a(n) <em>{{ word.adj }}</em> robot named <em>{{ word.celebrity }}</em> that not only loved <em>{{ word.task2 }}</em> but did it <em>{{ word.number }}</em> times faster. 
         </p>
       </section>
     </div>
