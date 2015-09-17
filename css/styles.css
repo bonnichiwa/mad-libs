@@ -36,6 +36,11 @@ h2 {
   font-size: 2em;
 }
 
+h3 {
+  font-family: 'Chewy', cursive;
+  font-size: 1.5em;
+}
+
 p {
   font-family: 'Chewy', cursive;
   letter-spacing: 0.08em;
@@ -70,4 +75,21 @@ input {
 
 em {
   border-bottom: dashed;
+}
+
+#buttons {
+  text-align: center;
+}
+
+button {
+  font-family: 'Chewy', cursive;
+  font-size: 1.5em;
+  padding: 1em;
+  margin-right: 1em;
+  border: 2px dashed black;
+  background-color: white;
+}
+
+button:hover {
+  cursor: pointer;
 }
