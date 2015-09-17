@@ -52,6 +52,7 @@ p {
 .blank-words {
   border: 2px solid black;
   padding: 0 2em;
+  text-align: center;
 }
 
 .paragraph {

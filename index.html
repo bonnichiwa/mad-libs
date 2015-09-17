@@ -50,12 +50,14 @@
             <button ng-click="male()">Male</button>
             <button ng-click="female()">Female</button>
           </div>
-          <p>The main character of this story will be a ... <em>{{ gender }}</em>! </p>
+          <h3>The main character of this story will be a ... <em>{{ gender }}</em>!</h3>
       </section>
 
     <!-- Paragraph -->
 
-      <section class="paragraph">  
+      <section class="paragraph">
+        <center><h2><u> A Great Life Story </u></h2>
+        <h3> By: {{words[0].name}} </h3> </center>
         <p><em>{{ words[0].name }}</em> was a <em>{{ words[1].job }}</em> who loved technology. Although {{gender1}} loved parts of {{gender2}} job, {{gender1}} absolutely hated  <em>{{ words[2].task }}</em> and <em>{{ words[3].task2 }}</em>. So, <em>{{ words[0].name }}</em> met with {{gender2}} life mentor <em>{{ words[4].mentor }}</em> who told {{gender3}} to learn how to <em>{{ words[5].skill }}</em> with Thinkful. Thinkful didn't offer a course on <em>{{ words[5].skill }}</em> so {{gender1}} studied programming instead. 
    
         What a great decision! With {{gender2}} new skills, <em>{{ words[0].name }}</em> built a(n) <em>{{ words[6].adj }}</em> robot named <em>{{ words[7].celebrity }}</em> that not only loved <em>{{ words[3].task2 }}</em> but did it <em>{{ words[8].number }}</em> times faster. 
