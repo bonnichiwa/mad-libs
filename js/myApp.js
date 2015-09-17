@@ -1,5 +1,6 @@
 angular.module('myApp', [])
   .controller('myCtrl', function($scope) {
+
     $scope.words = [{"name": "female name"},
                     {"job": "job title"},
                     {"task": "tedious task"},

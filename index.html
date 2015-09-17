@@ -31,19 +31,19 @@
 
     <!-- Blank words thats need to be filled in -->
     
-    <div ng-controller="myCtrl" >
+    <div ng-controller="myCtrl">
       <section class="blank-words">
         <h2>Provide the following words:<h2>
-          <ul>
-            <li><input type="text" ng-model="word.name"></li>
-            <li><input type="text" ng-model="word.job"></li>
-            <li><input type="text" ng-model="word.task"></li>
-            <li><input type="text" ng-model="word.task2"></li>
-            <li><input type="text" ng-model="word.mentor"></li>
-            <li><input type="text" ng-model="word.skill"></li>
-            <li><input type="text" ng-model="word.adj"></li>
-            <li><input type="text" ng-model="word.celebrity"></li>
-            <li><input type="text" ng-model="word.number"></li>
+          <ul ng->
+            <li><input type="text" ng-model="words[0].name"></li>
+            <li><input type="text" ng-model="words[1].job"></li>
+            <li><input type="text" ng-model="words[2].task"></li>
+            <li><input type="text" ng-model="words[3].task2"></li>
+            <li><input type="text" ng-model="words[4].mentor"></li>
+            <li><input type="text" ng-model="words[5].skill"></li>
+            <li><input type="text" ng-model="words[6].adj"></li>
+            <li><input type="text" ng-model="words[7].celebrity"></li>
+            <li><input type="text" ng-model="words[8].number"></li>
           </ul>
       </section>
 
