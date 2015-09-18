@@ -12,8 +12,16 @@ angular.module('myApp', [])
                     {"number": "huge number"}];
 
     $scope.gender = 'pick a gender';
+    $scope.genderClicked = false;
+
+    $scope.clicked = function () {
+    if ($scope.genderclicked == true) {
+      console.log("You picked a gender, thank you!");
+    }
+    }
 
     $scope.male = function() {
+      $scope.genderClicked = true;
       $scope.gender = 'boy';
       $scope.gender1 = 'he';
       $scope.gender2 = 'his';
@@ -21,6 +29,7 @@ angular.module('myApp', [])
     };
 
     $scope.female = function() {
+      $scope.genderClicked = true;
       $scope.gender = 'girl';
       $scope.gender1 = 'she';
       $scope.gender2 = 'her';
@@ -32,6 +41,5 @@ angular.module('myApp', [])
     $scope.blanks = true;
 
     $scope.submit = function(){
-      console.log("submitted form");
-    }
+    };
 });

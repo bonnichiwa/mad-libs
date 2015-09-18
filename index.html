@@ -42,20 +42,18 @@
             <hr>
           <h2>Provide the following words:<h2>
             <form name="wordsForm" novalidate ng-submit="submit()">
-              <input type="text" name="greeting" ng-model="words[0].name" required>
-              <input type="text" name="job" ng-model="words[1].job" required>
-              <input type="text" name="task" ng-model="words[2].task" required>
-              <input type="text" name="task2" ng-model="words[3].task2" required>
-              <input type="text" name="mentor" ng-model="words[4].mentor" required>
-              <input type="text" name="skill" ng-model="words[5].skill" required>
-              <input type="text" name="adj" ng-model="words[6].adj" required>
-              <input type="text" name="celeb" ng-model="words[7].celebrity" required>
-              <input type="text" name="number" ng-model="words[8].number" required ng-pattern="/^[1-9][0-9]*$/">
-              <input type="submit" value="Generate My Mad Lib" id="submit" ng-click="showStory = !showStory; blanks = !blanks" />
+              <input type="text" name="greeting" ng-model="data.name" placeholder="name" placeholder="name" required>
+              <input type="text" name="job" ng-model="data.job" placeholder="job title" required>
+              <input type="text" name="task" ng-model="data.task" placeholder="tedious task" required>
+              <input type="text" name="task2" ng-model="data.task2" placeholder="dirty task" required>
+              <input type="text" name="mentor" ng-model="data.mentor" placeholder="celebrity" required>
+              <input type="text" name="skill" ng-model="data.skill" placeholder="useless skill" required>
+              <input type="text" name="adj" ng-model="data.adj" placeholder="adjective" required>
+              <input type="text" name="celeb" ng-model="data.celebrity" placeholder="obnoxious celebrity" required>
+              <input type="text" name="number" ng-model="data.number" placeholder="huge number" required ng-pattern="/^[1-9][0-9]*$/">
+              <input type="submit" value="Generate My Mad Lib" id="submit" ng-disabled="wordsForm.$invalid" ng-click="showStory = !showStory; blanks = !blanks" />
             </form>
-            <hr>
             <!-- Errors -->
-            <h3>Errors:</h3>
             <p class="error" ng-if="wordsForm.$submitted && wordsForm.greeting.$error.required">
               You must enter a name!
             </p>
@@ -81,7 +79,7 @@
               You must enter an obnoxious celebrity!
             </p>
             <p class="error" ng-if="wordsForm.$submitted && wordsForm.number.$error.required">
-              You must enter a valid number!
+              You must enter a number!
             </p>
             <p class="error" ng-if="wordsForm.$submitted && wordsForm.number.$error.pattern">
               You must enter a valid number!
@@ -93,10 +91,10 @@
       <div class="story" ng-hide="showStory">
         <section class="paragraph">
           <center><h2><u> A Great Life Story </u></h2>
-          <h3> By: {{words[0].name}} </h3> </center>
-          <p><em>{{ words[0].name }}</em> was a <em>{{ words[1].job }}</em> who loved technology. Although {{gender1}} loved parts of {{gender2}} job, {{gender1}} absolutely hated  <em>{{ words[2].task }}</em> and <em>{{ words[3].task2 }}</em>. So, <em>{{ words[0].name }}</em> met with {{gender2}} life mentor <em>{{ words[4].mentor }}</em> who told {{gender3}} to learn how to <em>{{ words[5].skill }}</em> with Thinkful. Thinkful didn't offer a course on <em>{{ words[5].skill }}</em> so {{gender1}} studied programming instead. 
+          <h3> By: {{data.name}} </h3> </center>
+          <p><em>{{ data.name }}</em> was a <em>{{ data.job }}</em> who loved technology. Although {{gender1}} loved parts of {{gender2}} job, {{gender1}} absolutely hated  <em>{{ data.task }}</em> and <em>{{ data.task2 }}</em>. So, <em>{{ data.name }}</em> met with {{gender2}} life mentor <em>{{ data.mentor }}</em> who told {{gender3}} to learn how to <em>{{ data.skill }}</em> with Thinkful. Thinkful didn't offer a course on <em>{{ data.skill }}</em> so {{gender1}} studied programming instead. 
      
-          What a great decision! With {{gender2}} new skills, <em>{{ words[0].name }}</em> built a(n) <em>{{ words[6].adj }}</em> robot named <em>{{ words[7].celebrity }}</em> that not only loved <em>{{ words[3].task2 }}</em> but did it <em>{{ words[8].number }}</em> times faster. 
+          What a great decision! With {{gender2}} new skills, <em>{{ data.name }}</em> built a(n) <em>{{ data.adj }}</em> robot named <em>{{ data.celebrity }}</em> that not only loved <em>{{ data.task2 }}</em> but did it <em>{{ data.number }}</em> times faster. 
           </p>
           <button id="reset" ng-click="blanks = !blanks; showStory = !showStory">Start Over</button>
         </section>
