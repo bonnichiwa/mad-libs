@@ -33,15 +33,17 @@
     <div ng-controller="myCtrl">
       <div class="blanks" ng-show="blanks">
         <section class="blank-words">
+          <form name="wordsForm" novalidate ng-submit="submit()">
           <h2>Pick a <u>gender</u> for this story:</h2>
             <div id="buttons">
               <button ng-click="male()">Male</button>
               <button ng-click="female()">Female</button>
             </div>
-            <h3>The main character of this story will be a . . . <em>{{ gender }}</em>!</h3>
+            <h3>
+              The main character of this story will be a . . . <em>{{ gender }}</em>!
+            </h3>
             <hr>
-          <h2>Provide the following words:<h2>
-            <form name="wordsForm" novalidate ng-submit="submit()">
+            <h2>Provide the following words:<h2>
               <input type="text" name="greeting" ng-model="data.name" placeholder="name" placeholder="name" required>
               <input type="text" name="job" ng-model="data.job" placeholder="job title" required>
               <input type="text" name="task" ng-model="data.task" placeholder="tedious task" required>
@@ -51,7 +53,7 @@
               <input type="text" name="adj" ng-model="data.adj" placeholder="adjective" required>
               <input type="text" name="celeb" ng-model="data.celebrity" placeholder="obnoxious celebrity" required>
               <input type="text" name="number" ng-model="data.number" placeholder="huge number" required ng-pattern="/^[1-9][0-9]*$/">
-              <input type="submit" value="Generate My Mad Lib" id="submit" ng-disabled="wordsForm.$invalid" ng-click="showStory = !showStory; blanks = !blanks" />
+              <input type="submit" value="Generate My Mad Lib" id="submit" ng-disabled="genderClicked == false && wordsForm.$invalid" ng-click="showStory = !showStory; blanks = !blanks" />
             </form>
             <!-- Errors -->
             <p class="error" ng-if="wordsForm.$submitted && wordsForm.greeting.$error.required">

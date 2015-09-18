@@ -14,18 +14,15 @@ angular.module('myApp', [])
     $scope.gender = 'pick a gender';
     $scope.genderClicked = false;
 
-    $scope.clicked = function () {
-    if ($scope.genderclicked == true) {
-      console.log("You picked a gender, thank you!");
-    }
-    }
-
     $scope.male = function() {
       $scope.genderClicked = true;
       $scope.gender = 'boy';
       $scope.gender1 = 'he';
       $scope.gender2 = 'his';
-      $scope.gender3 = 'him'
+      $scope.gender3 = 'him';
+      if ($scope.genderClicked == true) {
+        console.log("You picked a boy, thank you!");
+      }
     };
 
     $scope.female = function() {
@@ -34,6 +31,9 @@ angular.module('myApp', [])
       $scope.gender1 = 'she';
       $scope.gender2 = 'her';
       $scope.gender3 = 'her';
+      if ($scope.genderClicked == true) {
+        console.log("You picked a girl, thank you!");
+      }
     };
 
     $scope.showStory = true;
