@@ -29,6 +29,8 @@ angular.module('myApp', [])
 
     $scope.showStory = true;
 
+    $scope.blanks = true;
+
     $scope.submit = function(){
       console.log("submitted form");
     }

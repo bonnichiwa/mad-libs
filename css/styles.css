@@ -64,7 +64,7 @@ hr {
 .paragraph {
   border: 2px solid black;
   padding: 2em;
-  margin-bottom: 5em;
+  padding-bottom: 10em;
 }
 
 li {
@@ -92,10 +92,13 @@ button {
   font-family: 'Chewy', cursive;
   font-size: 1.5em;
   padding: 1em;
-
   margin-right: 1em;
   border: 2px dashed black;
   background-color: white;
+}
+
+button#reset {
+  float: right;
 }
 
 button:hover {
@@ -115,10 +118,3 @@ button:hover {
   text-align: center;
 }
 
-/*.blanks {
-  display: none;
-}
-
-.story {
-  display: none;
-}*/

@@ -31,7 +31,7 @@
 
     <!-- Blank words thats need to be filled in -->
     <div ng-controller="myCtrl">
-      <div class="blanks">
+      <div class="blanks" ng-show="blanks">
         <section class="blank-words">
           <h2>Pick a <u>gender</u> for this story:</h2>
             <div id="buttons">
@@ -42,20 +42,47 @@
             <hr>
           <h2>Provide the following words:<h2>
             <form name="wordsForm" novalidate ng-submit="submit()">
-              <input type="text" ng-model="words[0].name" required>
-              <input type="text" ng-model="words[1].job" required>
-              <input type="text" ng-model="words[2].task" required>
-              <input type="text" ng-model="words[3].task2" required>
-              <input type="text" ng-model="words[4].mentor" required>
-              <input type="text" ng-model="words[5].skill" required>
-              <input type="text" ng-model="words[6].adj" required>
-              <input type="text" ng-model="words[7].celebrity" required>
+              <input type="text" name="greeting" ng-model="words[0].name" required>
+              <input type="text" name="job" ng-model="words[1].job" required>
+              <input type="text" name="task" ng-model="words[2].task" required>
+              <input type="text" name="task2" ng-model="words[3].task2" required>
+              <input type="text" name="mentor" ng-model="words[4].mentor" required>
+              <input type="text" name="skill" ng-model="words[5].skill" required>
+              <input type="text" name="adj" ng-model="words[6].adj" required>
+              <input type="text" name="celeb" ng-model="words[7].celebrity" required>
               <input type="text" name="number" ng-model="words[8].number" required ng-pattern="/^[1-9][0-9]*$/">
-              <input type="submit" value="Generate My Mad Lib" id="submit" ng-click="showStory = !showStory" />
+              <input type="submit" value="Generate My Mad Lib" id="submit" ng-click="showStory = !showStory; blanks = !blanks" />
             </form>
             <hr>
             <!-- Errors -->
             <h3>Errors:</h3>
+            <p class="error" ng-if="wordsForm.$submitted && wordsForm.greeting.$error.required">
+              You must enter a name!
+            </p>
+            <p class="error" ng-if="wordsForm.$submitted && wordsForm.job.$error.required">
+              You must enter a job title!
+            </p>
+            <p class="error" ng-if="wordsForm.$submitted && wordsForm.task.$error.required">
+              You must enter a tedious task!
+            </p>
+            <p class="error" ng-if="wordsForm.$submitted && wordsForm.task2.$error.required">
+              You must enter a dirty task!
+            </p>
+            <p class="error" ng-if="wordsForm.$submitted && wordsForm.mentor.$error.required">
+              You must enter a celebrity!
+            </p>
+            <p class="error" ng-if="wordsForm.$submitted && wordsForm.skill.$error.required">
+              You must enter an useless skill!
+            </p>
+            <p class="error" ng-if="wordsForm.$submitted && wordsForm.adj.$error.required">
+              You must enter an adjective!
+            </p>
+            <p class="error" ng-if="wordsForm.$submitted && wordsForm.celeb.$error.required">
+              You must enter an obnoxious celebrity!
+            </p>
+            <p class="error" ng-if="wordsForm.$submitted && wordsForm.number.$error.required">
+              You must enter a valid number!
+            </p>
             <p class="error" ng-if="wordsForm.$submitted && wordsForm.number.$error.pattern">
               You must enter a valid number!
             </p>
@@ -71,6 +98,7 @@
      
           What a great decision! With {{gender2}} new skills, <em>{{ words[0].name }}</em> built a(n) <em>{{ words[6].adj }}</em> robot named <em>{{ words[7].celebrity }}</em> that not only loved <em>{{ words[3].task2 }}</em> but did it <em>{{ words[8].number }}</em> times faster. 
           </p>
+          <button id="reset" ng-click="blanks = !blanks; showStory = !showStory">Start Over</button>
         </section>
       </div>
     </div>
