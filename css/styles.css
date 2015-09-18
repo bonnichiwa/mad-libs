@@ -49,9 +49,15 @@ p {
   font-size: 1.5em;
 }
 
+hr {
+  border: 1.5px dashed black;
+
+}
+
 .blank-words {
   border: 2px solid black;
   padding: 0 2em;
+  padding-bottom: 2em;
   text-align: center;
 }
 
@@ -86,6 +92,7 @@ button {
   font-family: 'Chewy', cursive;
   font-size: 1.5em;
   padding: 1em;
+
   margin-right: 1em;
   border: 2px dashed black;
   background-color: white;
@@ -93,6 +100,10 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+button#generate-story {
+  margin-top: 1.5em;
 }
 
 .blanks {

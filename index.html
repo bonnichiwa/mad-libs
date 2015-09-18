@@ -45,12 +45,15 @@
             <li><input type="text" ng-model="words[7].celebrity"></li>
             <li><input type="text" ng-model="words[8].number"></li>
           </ul>
+          <hr>
           <h2>Pick a <u>gender</u> for this story:</h2>
           <div id="buttons">
             <button ng-click="male()">Male</button>
             <button ng-click="female()">Female</button>
           </div>
           <h3>The main character of this story will be a . . . <em>{{ gender }}</em>!</h3>
+          <hr>
+          <button id="generate-story" ng-click="showStory">Generate My Mad Lib</button>
       </section>
     </div>
   </div>
