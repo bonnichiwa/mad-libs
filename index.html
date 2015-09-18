@@ -30,46 +30,45 @@
     </header>
 
     <!-- Blank words thats need to be filled in -->
-    <div class="blanks">
     <div ng-controller="myCtrl">
-      <section class="blank-words">
-        <h2>Provide the following words:<h2>
-          <ul ng->
-            <li><input type="text" ng-model="words[0].name"></li>
-            <li><input type="text" ng-model="words[1].job"></li>
-            <li><input type="text" ng-model="words[2].task"></li>
-            <li><input type="text" ng-model="words[3].task2"></li>
-            <li><input type="text" ng-model="words[4].mentor"></li>
-            <li><input type="text" ng-model="words[5].skill"></li>
-            <li><input type="text" ng-model="words[6].adj"></li>
-            <li><input type="text" ng-model="words[7].celebrity"></li>
-            <li><input type="text" ng-model="words[8].number"></li>
-          </ul>
-          <hr>
-          <h2>Pick a <u>gender</u> for this story:</h2>
-          <div id="buttons">
-            <button ng-click="male()">Male</button>
-            <button ng-click="female()">Female</button>
-          </div>
-          <h3>The main character of this story will be a . . . <em>{{ gender }}</em>!</h3>
-          <hr>
-          <button id="generate-story" ng-click="showStory">Generate My Mad Lib</button>
-      </section>
-    </div>
-  </div>
+      <div class="blanks">
+        <section class="blank-words">
+          <h2>Provide the following words:<h2>
+            <ul ng->
+              <li><input type="text" ng-model="words[0].name"></li>
+              <li><input type="text" ng-model="words[1].job"></li>
+              <li><input type="text" ng-model="words[2].task"></li>
+              <li><input type="text" ng-model="words[3].task2"></li>
+              <li><input type="text" ng-model="words[4].mentor"></li>
+              <li><input type="text" ng-model="words[5].skill"></li>
+              <li><input type="text" ng-model="words[6].adj"></li>
+              <li><input type="text" ng-model="words[7].celebrity"></li>
+              <li><input type="text" ng-model="words[8].number"></li>
+            </ul>
+            <hr>
+            <h2>Pick a <u>gender</u> for this story:</h2>
+            <div id="buttons">
+              <button ng-click="male()">Male</button>
+              <button ng-click="female()">Female</button>
+            </div>
+            <h3>The main character of this story will be a . . . <em>{{ gender }}</em>!</h3>
+            <hr>
+            <button id="generate-story" ng-click="showStory = !showStory">Generate My Mad Lib</button>
+        </section>
+      </div>
 
     <!-- Paragraph -->
-    <div class="story" ng-controller="myCtrl">
-      <section class="paragraph">
-        <center><h2><u> A Great Life Story </u></h2>
-        <h3> By: {{words[0].name}} </h3> </center>
-        <p><em>{{ words[0].name }}</em> was a <em>{{ words[1].job }}</em> who loved technology. Although {{gender1}} loved parts of {{gender2}} job, {{gender1}} absolutely hated  <em>{{ words[2].task }}</em> and <em>{{ words[3].task2 }}</em>. So, <em>{{ words[0].name }}</em> met with {{gender2}} life mentor <em>{{ words[4].mentor }}</em> who told {{gender3}} to learn how to <em>{{ words[5].skill }}</em> with Thinkful. Thinkful didn't offer a course on <em>{{ words[5].skill }}</em> so {{gender1}} studied programming instead. 
-   
-        What a great decision! With {{gender2}} new skills, <em>{{ words[0].name }}</em> built a(n) <em>{{ words[6].adj }}</em> robot named <em>{{ words[7].celebrity }}</em> that not only loved <em>{{ words[3].task2 }}</em> but did it <em>{{ words[8].number }}</em> times faster. 
-        </p>
-      </section>
+      <div class="story" ng-hide="showStory">
+        <section class="paragraph">
+          <center><h2><u> A Great Life Story </u></h2>
+          <h3> By: {{words[0].name}} </h3> </center>
+          <p><em>{{ words[0].name }}</em> was a <em>{{ words[1].job }}</em> who loved technology. Although {{gender1}} loved parts of {{gender2}} job, {{gender1}} absolutely hated  <em>{{ words[2].task }}</em> and <em>{{ words[3].task2 }}</em>. So, <em>{{ words[0].name }}</em> met with {{gender2}} life mentor <em>{{ words[4].mentor }}</em> who told {{gender3}} to learn how to <em>{{ words[5].skill }}</em> with Thinkful. Thinkful didn't offer a course on <em>{{ words[5].skill }}</em> so {{gender1}} studied programming instead. 
+     
+          What a great decision! With {{gender2}} new skills, <em>{{ words[0].name }}</em> built a(n) <em>{{ words[6].adj }}</em> robot named <em>{{ words[7].celebrity }}</em> that not only loved <em>{{ words[3].task2 }}</em> but did it <em>{{ words[8].number }}</em> times faster. 
+          </p>
+        </section>
+      </div>
     </div>
-  </div>
 
   </body>
 

@@ -26,4 +26,6 @@ angular.module('myApp', [])
       $scope.gender2 = 'her';
       $scope.gender3 = 'her';
     };
+
+    $scope.showStory = true;
 });
