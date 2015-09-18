@@ -104,8 +104,9 @@ button:hover {
 
 #submit {
   font-family: 'Chewy', cursive;
-  font-size: 1.5em;
+  font-size: .75em;
   margin-top: 1.5em;
+  margin-bottom: 1.5em;
   background-color: white;
   padding: 1em;
 }

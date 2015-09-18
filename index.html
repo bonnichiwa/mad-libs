@@ -33,8 +33,15 @@
     <div ng-controller="myCtrl">
       <div class="blanks">
         <section class="blank-words">
+          <h2>Pick a <u>gender</u> for this story:</h2>
+            <div id="buttons">
+              <button ng-click="male()">Male</button>
+              <button ng-click="female()">Female</button>
+            </div>
+            <h3>The main character of this story will be a . . . <em>{{ gender }}</em>!</h3>
+            <hr>
           <h2>Provide the following words:<h2>
-            <form name="wordsForm" ng-submit="submit()">
+            <form name="wordsForm" novalidate ng-submit="submit()">
               <input type="text" ng-model="words[0].name" required>
               <input type="text" ng-model="words[1].job" required>
               <input type="text" ng-model="words[2].task" required>
@@ -44,19 +51,12 @@
               <input type="text" ng-model="words[6].adj" required>
               <input type="text" ng-model="words[7].celebrity" required>
               <input type="text" name="number" ng-model="words[8].number" required ng-pattern="/^[1-9][0-9]*$/">
+              <input type="submit" value="Generate My Mad Lib" id="submit" ng-click="showStory = !showStory" />
             </form>
             <hr>
-            <h2>Pick a <u>gender</u> for this story:</h2>
-            <div id="buttons">
-              <button ng-click="male()">Male</button>
-              <button ng-click="female()">Female</button>
-            </div>
-            <h3>The main character of this story will be a . . . <em>{{ gender }}</em>!</h3>
-            <hr>
-            <input type="submit" value="Generate My Mad Lib" id="submit" ng-click="showStory = !showStory" />
             <!-- Errors -->
             <h3>Errors:</h3>
-            <p class="error" ng-if="wordsForm.number.$error.pattern">
+            <p class="error" ng-if="wordsForm.$submitted && wordsForm.number.$error.pattern">
               You must enter a valid number!
             </p>
         </section>
