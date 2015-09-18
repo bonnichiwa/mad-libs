@@ -56,7 +56,7 @@
               <input type="submit" value="Generate My Mad Lib" id="submit" ng-disabled="genderClicked == false && wordsForm.$invalid" ng-click="showStory = !showStory; blanks = !blanks" />
             </form>
             <!-- Errors -->
-            <p class="error" ng-if="wordsForm.$submitted && wordsForm.greeting.$error.required">
+            <!-- <p class="error" ng-if="wordsForm.$submitted && wordsForm.greeting.$error.required">
               You must enter a name!
             </p>
             <p class="error" ng-if="wordsForm.$submitted && wordsForm.job.$error.required">
@@ -85,7 +85,7 @@
             </p>
             <p class="error" ng-if="wordsForm.$submitted && wordsForm.number.$error.pattern">
               You must enter a valid number!
-            </p>
+            </p> -->
         </section>
       </div>
 
