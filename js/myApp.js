@@ -42,4 +42,8 @@ angular.module('myApp', [])
 
     $scope.submit = function(){
     };
-});
+
+    $scope.reset = function(wordsForm) {
+      $scope.wordsForm.$setPristine();
+    };
+  });

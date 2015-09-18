@@ -53,7 +53,7 @@
               <input type="text" name="adj" ng-model="data.adj" placeholder="adjective" required>
               <input type="text" name="celeb" ng-model="data.celebrity" placeholder="obnoxious celebrity" required>
               <input type="text" name="number" ng-model="data.number" placeholder="huge number" required ng-pattern="/^[1-9][0-9]*$/">
-              <input type="submit" value="Generate My Mad Lib" id="submit" ng-disabled="genderClicked == false && wordsForm.$invalid" ng-click="showStory = !showStory; blanks = !blanks" />
+              <input type="submit" value="Generate My Mad Lib" id="submit" ng-disabled="genderClicked == false || wordsForm.$invalid" ng-click="showStory = !showStory; blanks = !blanks" />
             </form>
             <!-- Errors -->
             <!-- <p class="error" ng-if="wordsForm.$submitted && wordsForm.greeting.$error.required">
@@ -98,7 +98,7 @@
      
           What a great decision! With {{gender2}} new skills, <em>{{ data.name }}</em> built a(n) <em>{{ data.adj }}</em> robot named <em>{{ data.celebrity }}</em> that not only loved <em>{{ data.task2 }}</em> but did it <em>{{ data.number }}</em> times faster. 
           </p>
-          <button id="reset" ng-click="blanks = !blanks; showStory = !showStory">Start Over</button>
+          <button id="reset" ng-click="reset(); blanks = !blanks; showStory = !showStory">Start Over</button>
         </section>
       </div>
     </div>
