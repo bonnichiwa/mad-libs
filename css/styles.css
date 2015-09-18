@@ -102,8 +102,16 @@ button:hover {
   cursor: pointer;
 }
 
-button#generate-story {
+#submit {
+  font-family: 'Chewy', cursive;
+  font-size: 1.5em;
   margin-top: 1.5em;
+  background-color: white;
+  padding: 1em;
+}
+
+.error {
+  text-align: center;
 }
 
 /*.blanks {

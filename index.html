@@ -34,17 +34,17 @@
       <div class="blanks">
         <section class="blank-words">
           <h2>Provide the following words:<h2>
-            <ul ng->
-              <li><input type="text" ng-model="words[0].name"></li>
-              <li><input type="text" ng-model="words[1].job"></li>
-              <li><input type="text" ng-model="words[2].task"></li>
-              <li><input type="text" ng-model="words[3].task2"></li>
-              <li><input type="text" ng-model="words[4].mentor"></li>
-              <li><input type="text" ng-model="words[5].skill"></li>
-              <li><input type="text" ng-model="words[6].adj"></li>
-              <li><input type="text" ng-model="words[7].celebrity"></li>
-              <li><input type="text" ng-model="words[8].number"></li>
-            </ul>
+            <form name="wordsForm" ng-submit="submit()">
+              <input type="text" ng-model="words[0].name" required>
+              <input type="text" ng-model="words[1].job" required>
+              <input type="text" ng-model="words[2].task" required>
+              <input type="text" ng-model="words[3].task2" required>
+              <input type="text" ng-model="words[4].mentor" required>
+              <input type="text" ng-model="words[5].skill" required>
+              <input type="text" ng-model="words[6].adj" required>
+              <input type="text" ng-model="words[7].celebrity" required>
+              <input type="text" name="number" ng-model="words[8].number" required ng-pattern="/^[1-9][0-9]*$/">
+            </form>
             <hr>
             <h2>Pick a <u>gender</u> for this story:</h2>
             <div id="buttons">
@@ -53,7 +53,12 @@
             </div>
             <h3>The main character of this story will be a . . . <em>{{ gender }}</em>!</h3>
             <hr>
-            <button id="generate-story" ng-click="showStory = !showStory">Generate My Mad Lib</button>
+            <input type="submit" value="Generate My Mad Lib" id="submit" ng-click="showStory = !showStory" />
+            <!-- Errors -->
+            <h3>Errors:</h3>
+            <p class="error" ng-if="wordsForm.number.$error.pattern">
+              You must enter a valid number!
+            </p>
         </section>
       </div>
 

@@ -28,4 +28,8 @@ angular.module('myApp', [])
     };
 
     $scope.showStory = true;
+
+    $scope.submit = function(){
+      console.log("submitted form");
+    }
 });
