@@ -1,15 +1,27 @@
 angular.module('myApp', [])
   .controller('myCtrl', function($scope) {
 
-    $scope.words = [{"name": "name"},
-                    {"job": "job title"},
-                    {"task": "tedious task"},
-                    {"task2": "dirty task"},
-                    {"mentor": "celebrity"},
-                    {"skill": "useless skill"},
-                    {"adj": "adjective"},
-                    {"celebrity": "obnoxious celebrity"},
-                    {"number": "huge number"}];
+    var defaultForm = {
+      name : "",
+      data : "",
+      task : "",
+      task2: "",
+      mentor: "",
+      skill: "",
+      adj: "",
+      celebrity: "",
+      number: ""
+    }
+
+    $scope.data = angular.copy(defaultForm);
+
+    $scope.reset = function() {
+      $scope.genderClicked = false;
+      $scope.gender = 'pick a gender';
+      $scope.wordsForm.$setPristine();
+      $scope.data = angular.copy(defaultForm);
+      console.log('empty');
+    }
 
     $scope.gender = 'pick a gender';
     $scope.genderClicked = false;
@@ -43,7 +55,4 @@ angular.module('myApp', [])
     $scope.submit = function(){
     };
 
-    $scope.reset = function(wordsForm) {
-      $scope.wordsForm.$setPristine();
-    };
   });
