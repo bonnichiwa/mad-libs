@@ -94,3 +94,11 @@ button {
 button:hover {
   cursor: pointer;
 }
+
+.blanks {
+/*  display: none;*/
+}
+
+.story {
+  display: none;
+}
