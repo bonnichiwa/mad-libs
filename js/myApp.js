@@ -1,3 +1,5 @@
+var app = angular.module('myApp', ['ngAnimate']);
+
 angular.module('myApp', [])
   .controller('myCtrl', function($scope) {
 
