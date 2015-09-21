@@ -50,11 +50,12 @@ angular.module('myApp', [])
       }
     };
 
-    $scope.showStory = true;
+    $scope.showStory = false;
 
     $scope.blanks = true;
 
     $scope.submit = function(){
     };
-
   });
+
+  
