@@ -69,6 +69,7 @@ hr {
 
 }
 
+/* CSS ANIMATION FOR SHOWING STORY */
 .story {
   overflow: hidden;
   transition: all linear 2s;
@@ -76,12 +77,12 @@ hr {
 
 .story.ng-hide-remove,
 .story.ng-hide-add.ng-hide-add-active {
-  max-height: 0;
+  opacity: 0;
 }
 
 .story.ng-hide-add,
 .story.ng-hide-remove.ng-hide-remove-active {
-  max-height: 2em;
+  opacity: 1;
 }
 
 li {
